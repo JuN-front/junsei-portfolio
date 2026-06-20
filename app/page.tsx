@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ExternalLink, Mail, X } from "lucide-react";
+import { FaGithub, FaXTwitter } from "react-icons/fa6";
+import { MdOutlineMail } from "react-icons/md";
 import SectionHeading from "@/components/SectionHeading";
 import NewsCard from "@/components/NewsCard";
 
@@ -58,9 +59,9 @@ export default function HomePage() {
 
         {/* SNS / Contact リンク */}
         <div className="flex gap-3 mt-2">
-          <SocialButton href={PROFILE.github}  icon={<ExternalLink size={14} />} label="GitHub" />
-          <SocialButton href={PROFILE.twitter} icon={<X size={14} />} label="X"      />
-          <SocialButton href={PROFILE.email}   icon={<Mail    size={14} />} label="Mail"   />
+          <SocialButton href={PROFILE.github}  icon={<FaGithub    size={14} />} label="GitHub" />
+          <SocialButton href={PROFILE.twitter} icon={<FaXTwitter  size={14} />} label="X"      />
+          <SocialButton href={PROFILE.email}   icon={<MdOutlineMail size={15} />} label="Mail"   />
         </div>
 
         {/* スクロール誘導アニメ */}
