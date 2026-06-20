@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaInstagram } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
 import SectionHeading from "@/components/SectionHeading";
 import NewsCard from "@/components/NewsCard";
@@ -8,21 +8,21 @@ import NewsCard from "@/components/NewsCard";
 // ▼ ここを自分の情報に書き換える
 // ========================================================
 const PROFILE = {
-  name:      "Your Name",
-  role:      "Frontend Engineer",
-  catchcopy: "Webの体験を、一行のコードから丁寧に作る。",
-  skills:    "React / Next.js / TypeScript",
-  about:     "東京を拠点に活動するフロントエンドエンジニア。UIの細部にこだわり、使いやすく美しいWebアプリケーションを作ることが得意です。ここに2〜3文の自己紹介を書いてください。",
-  github:    "https://github.com/your-handle",
-  twitter:   "https://x.com/your-handle",
-  email:     "mailto:your@email.com",
+  name:      "Junsei Fukushima",
+  role:      "福島惇聖",
+  catchcopy: "見やすく、使いやすく、便利なWebアプリ開発をモットーに",
+  skills:    "React / Next.js / TypeScript etc.",
+  about:     "個人で様々な種類や規模の課題解決を目指した開発を行っています！",
+  github:    "https://github.com/JuN-front",
+  instagram: "https://www.instagram.com/junsei1128/",
+  email:     "wasefuku.fsci@gmail.com",
 };
 
 // ▼ Phase 2 で DB から取得するデータ（今はハードコーディング）
 const NEWS_ITEMS = [
-  { date: "2025.06.01", title: "〇〇株式会社のインターンシップに参加しました",     isNew: true  },
-  { date: "2025.04.15", title: "個人開発プロジェクト「〇〇」をリリースしました",    isNew: false },
-  { date: "2025.02.10", title: "〇〇大学の〇〇学部に入学しました",                 isNew: false },
+  { date: "2025.06.21", title: "人生初のポートフォリオをリリースしました",     isNew: true  },
+  { date: "2025.05.10", title: "個人開発プロジェクト「ジョブカン」をリリースしました",    isNew: false },
+  { date: "2025.04.01", title: "東京科学大学に入学しました",                 isNew: false },
 ];
 // ========================================================
 
@@ -60,7 +60,7 @@ export default function HomePage() {
         {/* SNS / Contact リンク */}
         <div className="flex gap-3 mt-2">
           <SocialButton href={PROFILE.github}  icon={<FaGithub    size={14} />} label="GitHub" />
-          <SocialButton href={PROFILE.twitter} icon={<FaXTwitter  size={14} />} label="X"      />
+          <SocialButton href={PROFILE.instagram} icon={<FaInstagram size={14} />} label="Instagram" />
           <SocialButton href={PROFILE.email}   icon={<MdOutlineMail size={15} />} label="Mail"   />
         </div>
 
