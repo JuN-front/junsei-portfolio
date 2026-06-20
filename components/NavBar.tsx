@@ -40,7 +40,7 @@ export default function NavBar() {
           "
         >
           {/* ← ここを自分の名前に変える */}
-          your.name
+          Junsei Fukushima's Portfolio
         </Link>
 
         {/* ナビリンク */}
