@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Mail, Twitter } from "lucide-react";
+import { ExternalLink, Mail, X } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import NewsCard from "@/components/NewsCard";
 
@@ -58,8 +58,8 @@ export default function HomePage() {
 
         {/* SNS / Contact リンク */}
         <div className="flex gap-3 mt-2">
-          <SocialButton href={PROFILE.github}  icon={<Github  size={14} />} label="GitHub" />
-          <SocialButton href={PROFILE.twitter} icon={<Twitter size={14} />} label="X"      />
+          <SocialButton href={PROFILE.github}  icon={<ExternalLink size={14} />} label="GitHub" />
+          <SocialButton href={PROFILE.twitter} icon={<X size={14} />} label="X"      />
           <SocialButton href={PROFILE.email}   icon={<Mail    size={14} />} label="Mail"   />
         </div>
 
