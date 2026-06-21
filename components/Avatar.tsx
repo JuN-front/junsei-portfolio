@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 type Props = {
@@ -14,7 +13,6 @@ export default function Avatar({ src, initials }: Props) {
   return (
     <div className="relative w-[72px] h-[72px] flex-shrink-0">
       {hasError ? (
-        /* 画像エラー時: イニシャルを表示 */
         <div
           className="
             w-full h-full rounded-full
@@ -26,13 +24,14 @@ export default function Avatar({ src, initials }: Props) {
           {initials}
         </div>
       ) : (
-        /* 通常時: 画像を表示 */
-        <Image
+        // next/image を使わず素の <img> で試す
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
           src={src}
           alt="アバター画像"
           width={72}
           height={72}
-          className="rounded-full object-cover"
+          className="rounded-full object-cover w-[72px] h-[72px]"
           onError={() => setHasError(true)}
         />
       )}
