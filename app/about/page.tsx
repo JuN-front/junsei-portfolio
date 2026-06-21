@@ -1,6 +1,6 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
+import Avatar from "@/components/Avatar";
 
 export const metadata: Metadata = {
   title: "About",
@@ -11,23 +11,20 @@ export const metadata: Metadata = {
 // ▼ ここを自分の情報に書き換える
 // ========================================================
 const PROFILE = {
-  name:     "Junsei Fukushima",
-  nameJa:   "福島 惇聖",
-  role:     "Graduate Student / Frontend Engineer",
+  name:     "Your Name",
+  nameJa:   "田中 太郎",
+  role:     "Frontend Engineer",
   avatar:   "/avatar.jpg",   // public/ に置く画像パス。なければ initials にフォールバック
-  initials: "JF",            // 画像が読み込めないときのフォールバック文字
+  initials: "YN",            // 画像が読み込めないときのフォールバック文字
   table: [
-    { label: "Birthday",  value: "2003年11月28日" },
+    { label: "Birthday",  value: "2000年1月1日" },
     { label: "Location",  value: "東京都" },
-    { label: "Education", value: "東京科学大学 環境・社会理工学院" },
-    { label: "Languages", value: "日本語（母国語）/ 英語" },
+    { label: "Education", value: "〇〇大学 〇〇学部（2022年入学）" },
+    { label: "Languages", value: "日本語（母国語）/ English（読み書き可）" },
   ],
   career: [
-    { year: "Now", org: "東京科学大学 環境・社会理工学院 在学中", role: "" },
-    { year: "2026.3", org: "早稲田大学基幹理工学部卒業", role: "" },
-    { year: "2022.12", org: "Waseda IT Leader Labにジョイン", role: "フロントエンドエンジニア" },
-    { year: "2022.4", org: "早稲田大学基幹理工学部入学", role: "" },
-    { year: "2022.3", org: "東京都立国際高等学校卒業", role: "" },
+    { year: "2024", org: "〇〇株式会社", role: "フロントエンドエンジニア インターン" },
+    { year: "2023", org: "〇〇株式会社", role: "Webデザイナー アルバイト" },
   ],
   stance: "仕事への価値観や大切にしていることをここに書きます。ユーザーの体験を第一に考え、コードの読みやすさや保守性を大切にしています。チームで働くことが好きで、積極的にコードレビューやドキュメント整備に取り組みます。",
   interests: ["コーヒー", "登山", "読書", "自転車", "写真"],
@@ -135,35 +132,4 @@ export default function AboutPage() {
   );
 }
 
-// ---- 内部コンポーネント: アバター ----
-// next/image を使いつつ、画像がない場合はイニシャルを表示
-function Avatar({ src, initials }: { src: string; initials: string }) {
-  return (
-    <div className="relative w-[72px] h-[72px] flex-shrink-0">
-      {/* イニシャルフォールバック（画像の下に敷く） */}
-      <div
-        className="
-          absolute inset-0 rounded-full
-          bg-bg-subtle border border-border-subtle
-          flex items-center justify-center
-          font-mono text-[18px] text-text-muted
-        "
-        aria-hidden
-      >
-        {initials}
-      </div>
-      {/* 画像（読み込めなければ透明になりイニシャルが見える） */}
-      <Image
-        src={src}
-        alt="アバター画像"
-        width={72}
-        height={72}
-        className="relative rounded-full object-cover"
-        onError={(e) => {
-          // 画像エラー時に非表示にしてフォールバックを見せる
-          (e.currentTarget as HTMLImageElement).style.opacity = "0";
-        }}
-      />
-    </div>
-  );
-}
+
