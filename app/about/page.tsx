@@ -14,7 +14,7 @@ const PROFILE = {
   name:     "Junsei Fukushima",
   nameJa:   "福島 惇聖",
   role:     "Graduate Student / Frontend Engineer",
-  avatar:   "/public/avatar.jpg",   // public/ に置く画像パス。なければ initials にフォールバック
+  avatar:   "/avatar.jpg",   // public/ に置く画像パス。なければ initials にフォールバック
   initials: "JF",            // 画像が読み込めないときのフォールバック文字
   table: [
     { label: "Birthday",  value: "2003年11月28日" },
