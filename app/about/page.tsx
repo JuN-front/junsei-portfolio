@@ -11,20 +11,22 @@ export const metadata: Metadata = {
 // ▼ ここを自分の情報に書き換える
 // ========================================================
 const PROFILE = {
-  name:     "Your Name",
-  nameJa:   "田中 太郎",
-  role:     "Frontend Engineer",
-  avatar:   "/avatar.jpg",   // public/ に置く画像パス。なければ initials にフォールバック
-  initials: "YN",            // 画像が読み込めないときのフォールバック文字
+  name:     "Junsei Fukushima",
+  nameJa:   "福島 惇聖",
+  role:     "Graduate Student / Frontend Engineer",
+  avatar:   "/public/avatar.jpg",   // public/ に置く画像パス。なければ initials にフォールバック
+  initials: "JF",            // 画像が読み込めないときのフォールバック文字
   table: [
-    { label: "Birthday",  value: "2000年1月1日" },
+    { label: "Birthday",  value: "2003年11月28日" },
     { label: "Location",  value: "東京都" },
-    { label: "Education", value: "〇〇大学 〇〇学部（2022年入学）" },
-    { label: "Languages", value: "日本語（母国語）/ English（読み書き可）" },
+    { label: "Education", value: "東京科学大学 環境・社会理工学院" },
+    { label: "Languages", value: "日本語（母国語）/ 英語" },
   ],
   career: [
-    { year: "2024", org: "〇〇株式会社", role: "フロントエンドエンジニア インターン" },
-    { year: "2023", org: "〇〇株式会社", role: "Webデザイナー アルバイト" },
+    { year: "2026.4", org: "東京科学大学 環境・社会理工学院 在学中", role: "" },
+    { year: "2026.3", org: "早稲田大学基幹理工学部 卒業", role: "" },
+    { year: "2022.12", org: "Waseda IT Leader Labにジョイン", role: "フロントエンドエンジニア" },
+    { year: "2022.4", org: "早稲田大学基幹理工学部 入学", role: "" },
   ],
   stance: "仕事への価値観や大切にしていることをここに書きます。ユーザーの体験を第一に考え、コードの読みやすさや保守性を大切にしています。チームで働くことが好きで、積極的にコードレビューやドキュメント整備に取り組みます。",
   interests: ["コーヒー", "登山", "読書", "自転車", "写真"],

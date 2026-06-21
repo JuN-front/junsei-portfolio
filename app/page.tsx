@@ -8,7 +8,7 @@ import NewsCard from "@/components/NewsCard";
 // ▼ ここを自分の情報に書き換える
 // ========================================================
 const PROFILE = {
-  name:      "Junsei Fukushimaのポートフォリオへようこそ！",
+  name:      "福島惇聖のポートフォリオへようこそ！",
   catchcopy: "見やすく、使いやすく、便利なWebアプリ開発をモットーに",
   skills:    "React / Next.js / TypeScript etc.",
   about:     "個人で様々な種類や規模の課題解決を目指した開発を行っています！",
