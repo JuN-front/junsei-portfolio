@@ -8,8 +8,7 @@ import NewsCard from "@/components/NewsCard";
 // ▼ ここを自分の情報に書き換える
 // ========================================================
 const PROFILE = {
-  name:      "Junsei Fukushima",
-  role:      "福島惇聖",
+  name:      "Junsei Fukushimaのポートフォリオへようこそ！",
   catchcopy: "見やすく、使いやすく、便利なWebアプリ開発をモットーに",
   skills:    "React / Next.js / TypeScript etc.",
   about:     "個人で様々な種類や規模の課題解決を目指した開発を行っています！",
@@ -39,9 +38,6 @@ export default function HomePage() {
         aria-label="ヒーローセクション"
       >
         {/* 職種ラベル */}
-        <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-accent">
-          {PROFILE.role}
-        </p>
 
         {/* 名前 */}
         <h1 className="text-5xl font-semibold tracking-[-0.02em] leading-tight">
