@@ -3,7 +3,7 @@ import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "職歴・スキル・資格のページです。",
+  description: "職歴・スキル・資格",
 };
 
 // ========================================================
@@ -13,16 +13,16 @@ export const metadata: Metadata = {
 // 職歴・インターン（新しい順）
 const EXPERIENCE: TimelineItem[] = [
   {
-    period: "2024.06 — 現在",
-    org:    "〇〇株式会社",
-    role:   "フロントエンドエンジニア インターン",
-    desc:   "React / Next.js を用いたWebアプリの開発に従事。UIコンポーネントの設計・実装を担当。",
+    period: "2025.04 — 2026.06",
+    org:    "株式会社Skillnote",
+    role:   "マーケティングインターン",
+    desc:   "主にデータの集計・分析・加工による施策提案の補佐を担当。<\n>1年間勤務をし、HubspotやWordPressなどのローコードツールの使用や分析も経験し、開発に役立つ知識をデータの観点から実践で学びました",
   },
   {
-    period: "2023.04 — 2024.03",
-    org:    "〇〇株式会社",
-    role:   "Webデザイナー アルバイト",
-    desc:   "LP・バナー制作、Figmaを用いたデザイン業務を担当。",
+    period: "2022.12 — 現在",
+    org:    "Waseda IT Leader Lab (WILL)",
+    role:   "フロントエンド",
+    desc:   "フロントエンドを学習し、修了後はレビュアーを担当。<\n>その後、SNSチームを経験した後、WILLの公式HPプロジェクトを担当し、開発にも携わりました。<\n>現在は、WILLの親サークルであるPlayGroundの公式HPの改装プロジェクトを立ち上げ、リーダーとして着手しております",
   },
 ];
 
@@ -38,14 +38,16 @@ const SKILLS: SkillGroup[] = [
   },
   {
     label: "Tools",
-    tags:  ["Git", "GitHub", "Figma", "Vercel"],
+    tags:  ["Git/GitHub", "Figma", "Vercel", "Stitch"],
   },
 ];
 
 // 資格・受賞歴（新しい順）
 const CERTIFICATIONS: CertItem[] = [
-  { year: "2024", name: "基本情報技術者試験" },
-  { year: "2023", name: "TOEIC 800点" },
+  { year: "2026.6", name: "基本情報技術者試験" },
+  { year: "2026.4", name: "中国語検定準4級" },
+  { year: "2025.5", name: "TOEIC 920点" },
+  { year: "2021.9", name: "英検1級" },
 ];
 // ========================================================
 

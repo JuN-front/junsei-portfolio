@@ -10,7 +10,7 @@ import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "制作物・プロジェクト一覧です。",
+  description: "制作物・プロジェクト一覧",
 };
 
 export const revalidate = 60;

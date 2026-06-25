@@ -19,11 +19,11 @@ const PROFILE = {
   table: [
     { label: "Birthday",  value: "2003年11月28日" },
     { label: "Location",  value: "東京都" },
-    { label: "Education", value: "東京科学大学 環境・社会理工学院" },
+    { label: "Education", value: "東京科学大学 環境・社会理工学院 社会・人間科学系" },
     { label: "Languages", value: "日本語（母国語）/ 英語" },
   ],
   career: [
-    { year: "2026.4", org: "東京科学大学 環境・社会理工学院 在学中", role: "永原研究室所属" },
+    { year: "2026.4", org: "東京科学大学 環境・社会理工学院 社会・人間科学系 在学中", role: "永原研究室所属" },
     { year: "2026.3", org: "早稲田大学基幹理工学部 情報理工学科 英語学位 卒業", role: "鷲崎・鵜林研究室所属" },
     { year: "2022.4", org: "早稲田大学基幹理工学部 英語学位 入学", role: "" },
     { year: "2022.3", org: "東京都立国際高等学校 国際学科 卒業", role: "" },

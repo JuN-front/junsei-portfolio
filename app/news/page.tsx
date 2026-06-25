@@ -7,7 +7,7 @@ import NewsCard from "@/components/NewsCard";
 
 export const metadata: Metadata = {
   title: "News",
-  description: "最新情報・お知らせの一覧です。",
+  description: "最新情報・お知らせ",
 };
 
 // revalidate: 60 = 60秒ごとに再生成（ISR）

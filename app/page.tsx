@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaInstagram } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
 import { db } from "@/db";
 import { news } from "@/db/schema";
@@ -15,12 +15,12 @@ export const revalidate = 60;
 const PROFILE = {
   name:      "Your Name",
   role:      "Frontend Engineer",
-  catchcopy: "Webの体験を、一行のコードから丁寧に作る。",
+  catchcopy: "「あってよかった」と思えるWebアプリで、日常をちょっと便利に",
   skills:    "React / Next.js / TypeScript",
-  about:     "東京を拠点に活動するフロントエンドエンジニア。UIの細部にこだわり、使いやすく美しいWebアプリケーションを作ることが得意です。ここに2〜3文の自己紹介を書いてください。",
-  github:    "https://github.com/your-handle",
-  twitter:   "https://x.com/your-handle",
-  email:     "mailto:your@email.com",
+  about:     "ポートフォリオをご覧いただき、ありがとうございます！福島惇聖です！<\n>Web開発を通じて、ユーザーの体験を大切にすることをモットーにしています。主にフロントエンドを担当し、使いやすく見た目にも美しいインターフェースを実装します。常に新しい技術を学び続けながら、チームの課題を解決し、プロダクトの価値を高めることがやりがいです！<\n>プログラミング以外にも色々とやっているのんきな変人ですが、よろしくお願いします！",
+  github:    "https://github.com/JuN-front",
+  instagram:   "https://instagram.com/junsei1128",
+  email:     "junseifukushima@fuji.waseda.jp",
 };
 // ========================================================
 
@@ -56,7 +56,7 @@ export default async function HomePage() {
         </p>
         <div className="flex gap-3 mt-2">
           <SocialButton href={PROFILE.github}  icon={<FaGithub      size={14} />} label="GitHub" />
-          <SocialButton href={PROFILE.twitter} icon={<FaXTwitter    size={14} />} label="X"      />
+          <SocialButton href={PROFILE.instagram} icon={<FaInstagram   size={14} />} label="Instagram" />
           <SocialButton href={PROFILE.email}   icon={<MdOutlineMail size={15} />} label="Mail"   />
         </div>
         <div className="flex flex-col items-center gap-2 mt-6 text-text-muted select-none" aria-hidden>
