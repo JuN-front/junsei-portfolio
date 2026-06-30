@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 
 // ---- 型定義 ----
-type NewsItem = { id: number; date: string; title: string; isNew: boolean };
+type NewsItem = { id: number; date: string; title: string; description: string | null; isNew: boolean };
 type Project  = { id: number; title: string; desc: string; thumbnail: string | null; tags: string; demo: string | null; github: string | null };
 
 export default function AdminPage() {
@@ -64,12 +64,13 @@ export default function AdminPage() {
 // News 管理
 // ================================================================
 function NewsManager() {
-  const [items,   setItems]   = useState<NewsItem[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [date,    setDate]    = useState("");
-  const [title,   setTitle]   = useState("");
-  const [isNew,   setIsNew]   = useState(false);
-  const [saving,  setSaving]  = useState(false);
+  const [items,       setItems]       = useState<NewsItem[]>([]);
+  const [loading,     setLoading]     = useState(true);
+  const [date,        setDate]        = useState("");
+  const [title,       setTitle]       = useState("");
+  const [description, setDescription] = useState("");
+  const [isNew,       setIsNew]       = useState(false);
+  const [saving,      setSaving]      = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -86,9 +87,9 @@ function NewsManager() {
     await fetch("/api/admin/news", {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
-      body:    JSON.stringify({ date, title, isNew }),
+      body:    JSON.stringify({ date, title, description, isNew }),
     });
-    setDate(""); setTitle(""); setIsNew(false);
+    setDate(""); setTitle(""); setDescription(""); setIsNew(false);
     setSaving(false);
     load();
   }
@@ -120,6 +121,12 @@ function NewsManager() {
             className="input flex-1"
           />
         </div>
+        <textarea
+          placeholder="説明（任意・数行）"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          className="input resize-none h-20"
+        />
         <div className="flex items-center gap-2">
           <input
             id="is-new"

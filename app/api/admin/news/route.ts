@@ -9,10 +9,13 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
-  const { date, title, isNew } = await req.json();
+  const { date, title, description, isNew } = await req.json();
   if (!date || !title) {
     return NextResponse.json({ error: "date と title は必須です" }, { status: 400 });
   }
-  const [item] = await db.insert(news).values({ date, title, isNew: isNew ?? false }).returning();
+  const [item] = await db
+    .insert(news)
+    .values({ date, title, description: description || null, isNew: isNew ?? false })
+    .returning();
   return NextResponse.json(item, { status: 201 });
 }

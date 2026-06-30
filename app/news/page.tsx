@@ -3,11 +3,11 @@ import { db } from "@/db";
 import { news } from "@/db/schema";
 import { desc } from "drizzle-orm";
 import SectionHeading from "@/components/SectionHeading";
-import NewsCard from "@/components/NewsCard";
+import NewsAccordion from "@/components/NewsAccordion";
 
 export const metadata: Metadata = {
   title: "News",
-  description: "最新情報・お知らせ",
+  description: "最新情報・お知らせ一覧",
 };
 
 // revalidate: 60 = 60秒ごとに再生成（ISR）
@@ -33,7 +33,7 @@ export default async function NewsPage() {
             まだ投稿がありません
           </p>
         ) : (
-          <NewsCard items={items} />
+          <NewsAccordion items={items} />
         )}
       </section>
 

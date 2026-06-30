@@ -2,11 +2,12 @@ import { pgTable, serial, text, boolean, timestamp } from "drizzle-orm/pg-core";
 
 // ---- news テーブル ----
 export const news = pgTable("news", {
-  id:        serial("id").primaryKey(),
-  date:      text("date").notNull(),       // "2025.06.01" 形式
-  title:     text("title").notNull(),
-  isNew:     boolean("is_new").notNull().default(false),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
+  id:          serial("id").primaryKey(),
+  date:        text("date").notNull(),       // "2025.06.01" 形式
+  title:       text("title").notNull(),
+  description: text("description"),          // 数行の説明（任意）
+  isNew:       boolean("is_new").notNull().default(false),
+  createdAt:   timestamp("created_at").notNull().defaultNow(),
 });
 
 // ---- projects テーブル ----
